@@ -29,18 +29,18 @@ module.exports = function zeros(expression) {
 	function foo(num, sign) {
 
 		let i = 0;
-		let mnoj = 5;
+		let multiplier = 5;
 
-		while ((Math.floor(num / mnoj)) != 0) {
+		while ((Math.floor(num / multiplier)) != 0) {
 			if (num % 2 != 0 && sign == 2) {
-				i += Math.round((num / mnoj) / 2);
-				mnoj *= 5;
+				i += Math.round((num / multiplier) / 2);
+				multiplier *= 5;
 			} else if (sign == 2) {
-					i += Math.floor((num / mnoj) / sign);
-					mnoj *= 5;
+					i += Math.floor((num / multiplier) / sign);
+					multiplier *= 5;
 				} else {
-					i += Math.floor((num / mnoj));
-					mnoj *= 5;
+					i += Math.floor((num / multiplier));
+					multiplier *= 5;
 				}
 			}
 		
